@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#0B1D26"/>
+  <path d="M14 26c6-6 12-6 18 0s12 6 18 0" stroke="#19C3B1" stroke-width="5" stroke-linecap="round"/>
+  <path d="M14 40c6-6 12-6 18 0s12 6 18 0" stroke="#F5F1EA" stroke-width="5" stroke-linecap="round"/>
+  <text x="80" y="42" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#0B1D26" letter-spacing="-0.5">Studio Rive</text>
+</svg>
