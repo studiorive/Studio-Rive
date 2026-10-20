@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Rive · Sites web pour PME du Québec</title>
+<meta name="description" content="Un site professionnel en 14 jours, en français, entièrement à distance. Forfaits dès 990 $ pour les entrepreneurs, cliniques et hébergements du Québec.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5f0; --surface:#ffffff; --ink:#14212b; --muted:#5a6772; --line:#e3ded3;
+  --brand:#0f5c4d; --brand-ink:#ffffff; --accent:#d9822b; --soft:#e7f0ec;
+  --radius:16px; --shadow:0 10px 30px rgba(20,33,43,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(2.2rem,5vw,3.6rem)}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:14px}
+h3{font-size:1.25rem;margin-bottom:6px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:640px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-primary{background:var(--brand);color:var(--brand-ink)}
+.btn-ghost{border:1.5px solid var(--ink)}
+header{position:sticky;top:0;z-index:10;background:rgba(247,245,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:Fraunces,serif;font-weight:700;font-size:1.35rem;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span{display:inline-block;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--brand),#2a9d84)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;color:var(--muted);font-weight:500}
+.links a.btn{color:var(--brand-ink)}
+@media(max-width:760px){.links a:not(.btn){display:none}}
+.hero{padding:80px 0 60px;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:50px}}
+.badge{display:inline-block;background:var(--soft);color:var(--brand);font-weight:600;font-size:.85rem;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;border:1px solid var(--line)}
+.browser{border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.browser .bar{background:#eceae4;padding:8px;display:flex;gap:6px}
+.browser .bar i{width:10px;height:10px;border-radius:50%;background:#cfcac0;display:block}
+.browser .screen{height:230px;background:linear-gradient(160deg,#1c3b4a,#0f5c4d);color:#fff;padding:22px;display:flex;flex-direction:column;justify-content:flex-end}
+.browser .screen b{font-family:Fraunces,serif;font-size:1.5rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;text-align:center}
+.stats div{background:var(--bg);border-radius:10px;padding:10px 4px}
+.stats strong{display:block;font-size:1.3rem;color:var(--brand)}
+.stats small{color:var(--muted);font-size:.78rem}
+section{padding:70px 0}
+.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.alt .card{background:var(--bg)}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--soft);display:grid;place-items:center;margin-bottom:14px;color:var(--brand)}
+.price{position:relative}
+.price.featured{border:2px solid var(--brand);box-shadow:var(--shadow)}
+.price .tag{position:absolute;top:-13px;left:26px;background:var(--accent);color:#fff;font-size:.78rem;font-weight:700;padding:4px 12px;border-radius:999px}
+.amount{font-family:Fraunces,serif;font-size:2.4rem;margin:8px 0 2px}
+.amount small{font-size:1rem;color:var(--muted);font-family:Inter,sans-serif}
+.price ul{list-style:none;margin:18px 0 22px}
+.price li{padding:6px 0 6px 26px;position:relative;color:var(--muted)}
+.price li:before{content:"";position:absolute;left:0;top:13px;width:14px;height:8px;border-left:2px solid var(--brand);border-bottom:2px solid var(--brand);transform:rotate(-45deg)}
+.price .btn{width:100%;text-align:center}
+.note{margin-top:22px;color:var(--muted);font-size:.95rem}
+.work{display:block;text-decoration:none;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--surface);transition:transform .2s}
+.work:hover{transform:translateY(-4px)}
+.work .thumb{height:180px;display:flex;align-items:flex-end;padding:18px;color:#fff;font-family:Fraunces,serif;font-size:1.3rem}
+.work .meta{padding:16px 18px;color:var(--muted);font-size:.95rem}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:34px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{counter-increment:s}
+.step:before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;margin-bottom:12px}
+.step p{color:var(--muted)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary:after{content:"+";color:var(--brand);font-size:1.3rem}
+details[open] summary:after{content:"–"}
+details p{color:var(--muted);margin-top:10px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+form{display:grid;gap:12px}
+input,textarea,select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg)}
+textarea{min-height:120px}
+footer{padding:34px 0;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#"><span></span>Studio Rive</a>
+      <div class="links">
+        <a href="#forfaits">Forfaits</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#demarche">Démarche</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary" href="#contact">Ma maquette gratuite</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <span class="badge">Pour les PME et travailleurs autonomes du Québec</span>
+      <h1>Votre site web professionnel, en ligne en 14 jours.</h1>
+      <p class="lead" style="margin-top:18px">Vos clients vous cherchent sur Google avant d'appeler. Nous créons un site clair, rapide et en français qui transforme ces recherches en appels, entièrement à distance et sans jargon.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">Recevoir ma maquette gratuite</a>
+        <a class="btn btn-ghost" href="#forfaits">Voir les forfaits</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="screen"><small>votreentreprise.ca</small><b>Toitures, soins, hébergement…<br>votre métier, bien présenté.</b></div>
+      </div>
+      <div class="stats">
+        <div><strong>14 j</strong><small>pour la mise en ligne</small></div>
+        <div><strong>0 $</strong><small>pour voir la maquette</small></div>
+        <div><strong>100 %</strong><small>en français</small></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2>Pourquoi un site, si j'ai déjà Facebook ?</h2>
+      <p class="lead">Parce que vos futurs clients ne vous cherchent pas sur Facebook : ils tapent « couvreur Sherbrooke » ou « massothérapeute Laval » dans Google.</p>
+      <div class="grid3">
+        <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Être trouvé sur Google</h3><p>Un site bien construit vous fait apparaître dans les recherches locales, à côté de vos concurrents.</p></div>
+        <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></div><h3>Inspirer confiance</h3><p>Vos réalisations, vos avis et votre licence RBQ ou votre ordre professionnel, présentés proprement.</p></div>
+        <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Recevoir des demandes 24 h sur 24</h3><p>Formulaire de soumission, réservation en ligne, bouton d'appel : vos clients passent à l'action même à 22 h.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="forfaits">
+    <div class="wrap">
+      <h2>Des forfaits clairs, sans surprise</h2>
+      <p class="lead">Prix fixes en dollars canadiens. Aucun frais caché, aucune taxe canadienne facturée.</p>
+      <div class="grid3">
+        <div class="card price">
+          <h3>Essentiel</h3>
+          <div class="amount">990 $</div>
+          <p class="note" style="margin:0">Livré en 7 jours</p>
+          <ul><li>Site d'une page complète</li><li>Adapté aux cellulaires</li><li>Formulaire de contact et bouton d'appel</li><li>Référencement local de base</li></ul>
+          <a class="btn btn-ghost" href="#contact">Choisir Essentiel</a>
+        </div>
+        <div class="card price featured">
+          <span class="tag">Le plus choisi</span>
+          <h3>Pro</h3>
+          <div class="amount">1 790 $</div>
+          <p class="note" style="margin:0">Livré en 14 jours</p>
+          <ul><li>Jusqu'à 5 pages</li><li>Galerie de réalisations</li><li>Référencement local complet</li><li>Optimisation de votre fiche Google</li><li>2 séries de révisions</li></ul>
+          <a class="btn btn-primary" href="#contact">Choisir Pro</a>
+        </div>
+        <div class="card price">
+          <h3>Pro + Réservation</h3>
+          <div class="amount">2 490 $</div>
+          <p class="note" style="margin:0">Livré en 14 jours</p>
+          <ul><li>Tout le forfait Pro</li><li>Prise de rendez-vous ou réservation en ligne</li><li>Rappels automatiques aux clients</li><li>Idéal pour cliniques et hébergements</li></ul>
+          <a class="btn btn-ghost" href="#contact">Choisir Réservation</a>
+        </div>
+      </div>
+      <p class="note"><strong>Hébergement et entretien : 39 $ par mois</strong> (ou 390 $ par an). Ce forfait comprend le nom de domaine, l'hébergement sécurisé, les sauvegardes et une petite modification par mois.</p>
+    </div>
+  </section>
+
+  <section id="realisations" class="alt">
+    <div class="wrap">
+      <h2>Exemples de sites</h2>
+      <p class="lead">Des maquettes de démonstration pour trois métiers que nous connaissons bien. Les entreprises présentées sont fictives.</p>
+      <div class="grid3">
+        <a class="work" href="maquettes/toiture.html"><div class="thumb" style="background:linear-gradient(150deg,#2b2f36,#7a4b2a)">Toitures Cap-Nord</div><div class="meta">Couvreur · forfait Pro</div></a>
+        <a class="work" href="maquettes/massotherapie.html"><div class="thumb" style="background:linear-gradient(150deg,#6d8b74,#c9b79c)">Clinique Mains d'Or</div><div class="meta">Massothérapie · forfait Réservation</div></a>
+        <a class="work" href="maquettes/gite.html"><div class="thumb" style="background:linear-gradient(150deg,#1d3a52,#4f7c8a)">Gîte de la Pointe-aux-Huards</div><div class="meta">Hébergement · forfait Réservation</div></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="demarche">
+    <div class="wrap">
+      <h2>Tout se fait à distance, simplement</h2>
+      <p class="lead">Pas de rencontre à planifier : tout passe par courriel, et vous validez à chaque étape.</p>
+      <div class="steps">
+        <div class="step"><h3>Maquette gratuite</h3><p>Nous vous envoyons un aperçu de votre futur site, sans engagement.</p></div>
+        <div class="step"><h3>Vos contenus</h3><p>Un court formulaire pour vos textes, vos photos et vos services. Nous rédigeons le reste.</p></div>
+        <div class="step"><h3>Création</h3><p>Votre site est prêt en 7 à 14 jours. Vous demandez les ajustements par courriel.</p></div>
+        <div class="step"><h3>Mise en ligne</h3><p>Nom de domaine, Google et formulaire : tout est branché, vous n'avez rien à faire.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="alt">
+    <div class="wrap" style="max-width:800px">
+      <h2>Questions fréquentes</h2>
+      <details><summary>Vous êtes où, exactement ?</summary><p>Notre studio est basé en France et travaille en français avec des entreprises du Québec. Le décalage horaire joue en votre faveur : votre site avance pendant la nuit.</p></details>
+      <details><summary>Comment se passe le paiement ?</summary><p>Vous versez 50 % à la signature et 50 % à la mise en ligne, par carte de crédit et en dollars canadiens. Aucune taxe canadienne n'est ajoutée.</p></details>
+      <details><summary>Est-ce que je serai propriétaire de mon site ?</summary><p>Oui. Le nom de domaine est enregistré à votre nom, et vos textes et vos photos vous appartiennent.</p></details>
+      <details><summary>Et si la maquette ne me plaît pas ?</summary><p>Vous n'avez rien à payer. Si c'est la première version du site qui ne vous plaît pas, nous la retravaillons sans frais.</p></details>
+      <details><summary>Le site respecte-t-il la Charte de la langue française ?</summary><p>Oui, tous nos sites sont rédigés en français. Une version anglaise peut être ajoutée en option.</p></details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Demandez votre maquette gratuite</h2>
+        <p class="lead">Dites-nous qui vous êtes : nous vous envoyons un aperçu de votre futur site sous 72 heures, sans engagement.</p>
+        <p class="note">Ou écrivez-nous directement : <a href="mailto:EMAIL_PROSPECTION">EMAIL_PROSPECTION</a></p>
+      </div>
+      <!-- Formulaire FormSubmit (gratuit) : remplacer EMAIL_PROSPECTION par l'adresse de prospection -->
+      <form action="https://formsubmit.co/EMAIL_PROSPECTION" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle demande de maquette">
+        <input type="hidden" name="_captcha" value="false">
+        <input name="name" placeholder="Votre nom" required>
+        <input name="company" placeholder="Nom de l'entreprise" required>
+        <input type="email" name="email" placeholder="Courriel" required>
+        <select name="secteur"><option>Construction et rénovation</option><option>Soins et bien-être</option><option>Hébergement et tourisme</option><option>Autre</option></select>
+        <textarea name="message" placeholder="Ville, services offerts, lien vers votre page Facebook ou votre fiche Google…"></textarea>
+        <button class="btn btn-primary" type="submit" style="border:0;cursor:pointer">Recevoir ma maquette</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Studio Rive · Création de sites web</span>
+    <span>Entreprise individuelle, SIRET à compléter · France</span>
+  </div>
+</footer>
+</body>
+</html>
