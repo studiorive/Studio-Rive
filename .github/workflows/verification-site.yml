@@ -1,0 +1,50 @@
+name: Vérification du site
+
+# Vérifie le site en ligne après chaque publication, chaque matin, ou à la demande.
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: [completed]
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    env:
+      SITE: https://studiorive.github.io/Studio-Rive
+    steps:
+      - name: Les pages répondent
+        run: |
+          echo "Attente de la mise en cache GitHub Pages..."
+          sleep 30
+          erreurs=0
+          for page in "" confidentialite.html mentions-legales.html merci.html \
+                      maquettes/toiture.html maquettes/massotherapie.html maquettes/gite.html \
+                      sitemap.xml robots.txt assets/og-image.png favicon.svg; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$SITE/$page")
+            if [ "$code" = "200" ]; then echo "OK   $code  /$page"; else echo "ÉCHEC $code  /$page"; erreurs=$((erreurs+1)); fi
+          done
+          [ "$erreurs" -eq 0 ] || { echo "$erreurs page(s) en erreur"; exit 1; }
+
+      - name: Le contenu essentiel est présent
+        run: |
+          html=$(curl -s "$SITE/")
+          for texte in "Demander ma maquette gratuite" "formsubmit.co" "confidentialite.html" "mentions-legales.html" "og:image"; do
+            echo "$html" | grep -q "$texte" && echo "OK   $texte" || { echo "MANQUANT  $texte"; exit 1; }
+          done
+
+      - name: Aucun lien cassé
+        uses: lycheeverse/lychee-action@v2.4.1
+        with:
+          args: >-
+            --no-progress --max-retries 3 --timeout 20
+            --exclude formsubmit.co
+            ${{ env.SITE }}/
+            ${{ env.SITE }}/confidentialite.html
+            ${{ env.SITE }}/mentions-legales.html
+            ${{ env.SITE }}/maquettes/toiture.html
+            ${{ env.SITE }}/maquettes/massotherapie.html
+            ${{ env.SITE }}/maquettes/gite.html
+          fail: true
