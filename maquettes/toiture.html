@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Toitures Cap-Nord · Couvreur à Sherbrooke</title>
 <meta name="description" content="Couvreur licencié RBQ à Sherbrooke depuis 2009. Bardeaux, toits plats, urgences 24 h, inspection, déneigement et gouttières partout en Estrie. Prix écrit en 48 h.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Rive">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:url" content="https://studiorive.github.io/Studio-Rive/maquettes/toiture.html">
+<meta property="og:title" content="Toitures Cap-Nord · Couvreur à Sherbrooke · Maquette Studio Rive">
+<meta property="og:description" content="Maquette de démonstration d'un site de couvreur réalisée par Studio Rive (entreprise fictive).">
+<meta property="og:image" content="https://studiorive.github.io/Studio-Rive/assets/realisations/toiture-desktop.png">
+<meta property="og:image:width" content="1440">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://studiorive.github.io/Studio-Rive/assets/realisations/toiture-desktop.png">
 <meta name="theme-color" content="#111110">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1353,21 +1365,21 @@ select{appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='htt
             <select id="q-ville" name="ville" required aria-describedby="e-ville"><option value="">Choisir…</option><option value="sherbrooke">Sherbrooke</option><option value="ayers-cliff">Ayer’s Cliff</option><option value="bromont">Bromont</option><option value="coaticook">Coaticook</option><option value="cookshire">Cookshire-Eaton</option><option value="east-angus">East Angus</option><option value="eastman">Eastman</option><option value="granby">Granby</option><option value="lac-megantic">Lac-Mégantic</option><option value="magog">Magog</option><option value="north-hatley">North Hatley</option><option value="richmond">Richmond</option><option value="stanstead">Stanstead</option><option value="val-des-sources">Val-des-Sources</option><option value="waterloo">Waterloo</option><option value="weedon">Weedon</option><option value="windsor">Windsor</option><option value="autre">Autre ville de l’Estrie</option></select>
             <p class="err" id="e-ville">Choisissez une ville.</p></div>
           <div class="field"><label for="q-area">Superficie approximative <span class="opt-l">(pi², si vous la connaissez)</span></label>
-            <input id="q-area" name="superficie" inputmode="numeric" autocomplete="off"></div>
+            <input id="q-area" name="superficie" maxlength="6" inputmode="numeric" autocomplete="off"></div>
           <div class="field"><label for="q-age">Âge du toit actuel</label>
             <select id="q-age" name="age"><option>Je ne sais pas</option><option>Moins de 10 ans</option><option>10 à 20 ans</option><option>Plus de 20 ans</option></select></div>
         </div>
         <div class="field"><label for="q-notes">Ce qu’on devrait savoir <span class="opt-l">(facultatif)</span></label>
-          <textarea id="q-notes" name="notes" placeholder="Ex. : infiltration près de la cheminée, accès par la cour arrière…"></textarea></div>
+          <textarea id="q-notes" name="notes" maxlength="800" placeholder="Ex. : infiltration près de la cheminée, accès par la cour arrière…"></textarea></div>
       </fieldset>
 
       <fieldset class="step" data-step="3">
         <legend><small>Étape 3 sur 4</small>Vos coordonnées</legend>
         <div class="grid2">
-          <div class="field"><label for="q-nom">Nom complet</label><input id="q-nom" name="nom" autocomplete="name" required aria-describedby="e-nom"><p class="err" id="e-nom">Indiquez votre nom.</p></div>
-          <div class="field"><label for="q-tel">Téléphone</label><input id="q-tel" name="tel" type="tel" autocomplete="tel" required aria-describedby="e-tel" placeholder="819 555-0100"><p class="err" id="e-tel">Un numéro à 10 chiffres, s’il vous plaît.</p></div>
-          <div class="field"><label for="q-mail">Courriel</label><input id="q-mail" name="courriel" type="email" autocomplete="email" required aria-describedby="e-mail"><p class="err" id="e-mail">Vérifiez l’adresse courriel.</p></div>
-          <div class="field"><label for="q-adr">Adresse des travaux</label><input id="q-adr" name="adresse" autocomplete="street-address" required aria-describedby="e-adr"><p class="err" id="e-adr">On en a besoin pour la visite.</p></div>
+          <div class="field"><label for="q-nom">Nom complet</label><input id="q-nom" name="nom" maxlength="80" autocomplete="name" required aria-describedby="e-nom"><p class="err" id="e-nom">Indiquez votre nom.</p></div>
+          <div class="field"><label for="q-tel">Téléphone</label><input id="q-tel" name="tel" type="tel" maxlength="25" autocomplete="tel" required aria-describedby="e-tel" placeholder="819 555-0100"><p class="err" id="e-tel">Un numéro à 10 chiffres, s’il vous plaît.</p></div>
+          <div class="field"><label for="q-mail">Courriel</label><input id="q-mail" name="courriel" type="email" maxlength="120" autocomplete="email" required aria-describedby="e-mail"><p class="err" id="e-mail">Vérifiez l’adresse courriel.</p></div>
+          <div class="field"><label for="q-adr">Adresse des travaux</label><input id="q-adr" name="adresse" maxlength="150" autocomplete="street-address" required aria-describedby="e-adr"><p class="err" id="e-adr">On en a besoin pour la visite.</p></div>
         </div>
         <div class="field">
           <span class="lab" id="l-rap">Meilleur moment pour vous rappeler</span>

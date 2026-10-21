@@ -5,15 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Studio Rive · Sites web sur mesure pour les petites entreprises</title>
 <meta name="description" content="Je crée des sites web simples et soignés pour les petites entreprises, en français et entièrement par courriel. Maquette gratuite sous 72 h, avant tout paiement. Forfaits dès 990 $.">
+<link rel="canonical" href="https://studiorive.github.io/Studio-Rive/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Rive">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:url" content="https://studiorive.github.io/Studio-Rive/">
 <meta property="og:title" content="Studio Rive · Sites web sur mesure pour les petites entreprises">
 <meta property="og:description" content="Un site clair, en français, fait à distance. Vous voyez une maquette gratuite avant de payer quoi que ce soit.">
-<meta property="og:image" content="assets/realisations/toiture-desktop.png">
+<meta property="og:image" content="https://studiorive.github.io/Studio-Rive/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Studio Rive : des sites clairs et soignés pour les petites entreprises du Québec. Maquette gratuite sous 72 h.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://studiorive.github.io/Studio-Rive/assets/og-image.png">
 <meta name="theme-color" content="#F5F1EA">
+<link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* Polices hébergées sur le site (aucun appel à Google Fonts) */
+@font-face{font-family:"Inter Tight";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/inter-tight-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/instrument-serif-italic-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 :root{
   --ink:#0B1D26; --ink-2:#132C38; --paper:#F5F1EA; --paper-2:#EFE9DF; --sand:#E9E1D3;
   --line:#DCD3C4; --line-dark:#24414E;
@@ -295,6 +308,10 @@ form .btn{width:100%;padding:17px 26px;font-size:1.02rem}
 .form-foot{font-size:.88rem;color:var(--muted-dark);text-align:center}
 .flash{border:1px solid var(--aqua);color:var(--paper);border-radius:12px;padding:12px 14px;font-size:.95rem;background:rgba(25,195,177,.08)}
 .flash[hidden]{display:none}
+.form-foot a{color:var(--paper);text-underline-offset:3px;text-decoration-color:var(--aqua)}
+.form-foot a:hover{color:var(--aqua)}
+.piege{position:absolute!important;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+picture{display:block}
 
 footer{padding:48px 0 56px;border-top:1px solid var(--line-dark)}
 footer .wrap{display:flex;justify-content:space-between;gap:20px 40px;flex-wrap:wrap;align-items:center;color:var(--muted-dark);font-size:.92rem}
@@ -389,7 +406,7 @@ footer nav a:hover{color:var(--paper)}
       <a href="#forfaits">Forfaits</a>
       <a href="#qui">Qui suis-je</a>
       <a href="#faq">Questions</a>
-      <a class="btn btn-ink" href="#contact">Demander ma maquette</a>
+      <a class="btn btn-ink" href="#contact">Demander ma maquette gratuite</a>
     </nav>
   </div>
 </header>
@@ -445,8 +462,8 @@ footer nav a:hover{color:var(--paper)}
     <div class="projects">
       <article class="project">
         <a class="stage reveal" href="maquettes/toiture.html" aria-label="Voir la maquette du site de couvreur">
-          <div class="browser"><div class="chrome"><i></i><i></i><i></i></div><img src="assets/realisations/toiture-desktop.png" alt="Page d'accueil d'un site de couvreur, version ordinateur : titre, bouton de soumission gratuite et licence RBQ" loading="lazy" width="1440" height="900"></div>
-          <div class="phone"><img src="assets/realisations/toiture-mobile.png" alt="Le même site de couvreur affiché sur un cellulaire" loading="lazy" width="390" height="780"></div>
+          <div class="browser"><div class="chrome"><i></i><i></i><i></i></div><img src="assets/realisations/toiture-desktop.png" alt="Maquette Toitures Cap-Nord sur ordinateur : le titre « On refait votre toit. Une fois. » en grandes lettres noires sur fond jaune, la licence RBQ et les boutons de soumission" loading="lazy" decoding="async" width="1440" height="900"></div>
+          <div class="phone"><img src="assets/realisations/toiture-mobile.png" alt="La maquette du couvreur sur cellulaire, avec une barre fixe Appeler et Soumission en bas de l'écran" loading="lazy" decoding="async" width="390" height="780"></div>
         </a>
         <div class="reveal">
           <span class="num">01</span><span class="kind">Construction · Couvreur</span>
@@ -459,8 +476,8 @@ footer nav a:hover{color:var(--paper)}
 
       <article class="project">
         <a class="stage reveal" href="maquettes/massotherapie.html" aria-label="Voir la maquette du site de clinique de massothérapie">
-          <div class="browser"><div class="chrome"><i></i><i></i><i></i></div><img src="assets/realisations/massotherapie-desktop.png" alt="Page d'accueil d'un site de clinique de massothérapie, version ordinateur" loading="lazy" width="1440" height="900"></div>
-          <div class="phone"><img src="assets/realisations/massotherapie-mobile.png" alt="Le site de la clinique de massothérapie sur un cellulaire" loading="lazy" width="390" height="780"></div>
+          <div class="browser"><div class="chrome"><i></i><i></i><i></i></div><img src="assets/realisations/massotherapie-desktop.png" alt="Maquette de la clinique Mains d'Or sur ordinateur : accueil aux tons lavande et module de réservation en ligne qui liste les soins et leurs prix" loading="lazy" decoding="async" width="1440" height="900"></div>
+          <div class="phone"><img src="assets/realisations/massotherapie-mobile.png" alt="La clinique sur cellulaire : la réservation commence juste sous le titre, avec le choix du soin" loading="lazy" decoding="async" width="390" height="780"></div>
         </a>
         <div class="reveal">
           <span class="num">02</span><span class="kind">Soins · Massothérapie</span>
@@ -473,8 +490,8 @@ footer nav a:hover{color:var(--paper)}
 
       <article class="project">
         <a class="stage reveal" href="maquettes/gite.html" aria-label="Voir la maquette du site de gîte touristique">
-          <div class="browser"><div class="chrome"><i></i><i></i><i></i></div><img src="assets/realisations/gite-desktop.png" alt="Page d'accueil d'un site de gîte touristique au bord d'un lac, version ordinateur" loading="lazy" width="1440" height="900"></div>
-          <div class="phone"><img src="assets/realisations/gite-mobile.png" alt="Le site du gîte sur un cellulaire, avec le bouton pour vérifier les disponibilités" loading="lazy" width="390" height="780"></div>
+          <div class="browser"><div class="chrome"><i></i><i></i><i></i></div><picture><source type="image/webp" srcset="assets/realisations/gite-desktop.webp"><img src="assets/realisations/gite-desktop.png" alt="Maquette du gîte Pointe-aux-Huards sur ordinateur : une maison éclairée au bord du lac, la nuit, et un sélecteur de saison" loading="lazy" decoding="async" width="1440" height="900"></picture></div>
+          <div class="phone"><picture><source type="image/webp" srcset="assets/realisations/gite-mobile.webp"><img src="assets/realisations/gite-mobile.png" alt="Le gîte sur cellulaire, avec le bouton orange pour voir les disponibilités" loading="lazy" decoding="async" width="390" height="780"></picture></div>
         </a>
         <div class="reveal">
           <span class="num">03</span><span class="kind">Hébergement · Gîte</span>
@@ -647,11 +664,13 @@ footer nav a:hover{color:var(--paper)}
       <input type="hidden" name="_subject" value="Nouvelle demande de maquette">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://studiorive.github.io/Studio-Rive/merci.html">
+      <div class="piege" aria-hidden="true"><label for="f-honey">Ne pas remplir ce champ</label><input type="text" id="f-honey" name="_honey" tabindex="-1" autocomplete="off"></div>
       <div class="row">
-        <div class="field"><label for="f-nom">Votre nom</label><input id="f-nom" name="nom" autocomplete="name" required><span class="msg">Indiquez votre nom.</span></div>
-        <div class="field"><label for="f-ent">Nom de l'entreprise</label><input id="f-ent" name="entreprise" autocomplete="organization" required><span class="msg">Indiquez le nom de votre entreprise.</span></div>
+        <div class="field"><label for="f-nom">Votre nom</label><input id="f-nom" name="nom" autocomplete="name" maxlength="80" required><span class="msg">Indiquez votre nom.</span></div>
+        <div class="field"><label for="f-ent">Nom de l'entreprise</label><input id="f-ent" name="entreprise" autocomplete="organization" maxlength="120" required><span class="msg">Indiquez le nom de votre entreprise.</span></div>
       </div>
-      <div class="field"><label for="f-mail">Courriel</label><input id="f-mail" type="email" name="email" autocomplete="email" placeholder="vous@entreprise.ca" required><span class="msg">Ce courriel ne semble pas valide.</span></div>
+      <div class="field"><label for="f-mail">Courriel</label><input id="f-mail" type="email" name="email" autocomplete="email" maxlength="120" placeholder="vous@entreprise.ca" required><span class="msg" data-vide="Indiquez votre courriel pour que je puisse vous répondre.">Ce courriel ne semble pas valide. Vérifiez qu'il ressemble à vous@entreprise.ca.</span></div>
       <div class="row row-sel">
         <div class="field"><label for="f-sect">Secteur</label>
           <select id="f-sect" name="secteur"><option>Construction, rénovation</option><option>Soins, bien-être</option><option>Hébergement, tourisme</option><option>Commerce local</option><option>Autre</option></select></div>
@@ -660,9 +679,9 @@ footer nav a:hover{color:var(--paper)}
       </div>
       <div class="field"><label for="f-msg">Votre ville, et un lien vers votre fiche Google ou Facebook <span class="opt">(facultatif)</span></label><textarea id="f-msg" name="message" maxlength="800" aria-describedby="count" placeholder="Ex. : Couvreur à Sherbrooke, voici notre page Facebook…"></textarea><span class="count" id="count">0 / 800</span></div>
       <p class="flash" id="flash" role="status" hidden></p>
-      <button class="btn btn-aqua" type="submit">Recevoir ma maquette gratuite
+      <button class="btn btn-aqua" type="submit">Demander ma maquette gratuite
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      <p class="form-foot">Gratuit, sans engagement. Votre courriel ne sert qu'à vous répondre.</p>
+      <p class="form-foot">Gratuit, sans engagement. Vos coordonnées servent seulement à vous répondre et à préparer la maquette. En envoyant ce formulaire, vous acceptez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
     </form>
   </div>
 </section>
@@ -675,7 +694,7 @@ footer nav a:hover{color:var(--paper)}
       <svg viewBox="0 0 64 64" fill="none" aria-hidden="true" style="width:30px;height:30px"><rect width="64" height="64" rx="16" fill="#132C38"/><path d="M14 26c6-6 12-6 18 0s12 6 18 0" stroke="#19C3B1" stroke-width="5" stroke-linecap="round"/><path d="M14 40c6-6 12-6 18 0s12 6 18 0" stroke="#F5F1EA" stroke-width="5" stroke-linecap="round"/></svg>
       Studio Rive
     </a>
-    <nav aria-label="Pied de page"><a href="#realisations">Réalisations</a><a href="#forfaits">Forfaits</a><a href="#faq">Questions</a><a href="mailto:meechi.studiorive@gmail.com">Courriel</a></nav>
+    <nav aria-label="Pied de page"><a href="#realisations">Réalisations</a><a href="#forfaits">Forfaits</a><a href="#faq">Questions</a><a href="mailto:meechi.studiorive@gmail.com">Courriel</a><a href="confidentialite.html">Confidentialité</a><a href="mentions-legales.html">Mentions légales</a></nav>
     <span>© 2026 Studio Rive · Sites web sur mesure pour les petites entreprises</span>
   </div>
 </footer>
@@ -858,24 +877,35 @@ footer nav a:hover{color:var(--paper)}
   var form=document.getElementById('form');
   form.setAttribute('novalidate','');
   function check(input){
-    var f=input.closest('.field'), ok=input.checkValidity()&&input.value.trim()!=='';
-    if(!input.required&&input.value.trim()==='')ok=true;
+    var f=input.closest('.field'), vide=input.value.trim()==='', ok=input.checkValidity()&&!vide;
+    if(!input.required&&vide)ok=true;
+    var m=f.querySelector('.msg');
+    if(m&&m.hasAttribute('data-vide')){if(!m.dataset.invalide)m.dataset.invalide=m.textContent;m.textContent=vide?m.getAttribute('data-vide'):m.dataset.invalide}
     f.classList.toggle('err',!ok); input.setAttribute('aria-invalid',!ok);
     return ok;
   }
-  var req=form.querySelectorAll('input[required]');
-  req.forEach(function(i){
+  var champs=form.querySelectorAll('input[required]');
+  champs.forEach(function(i){
     var m=i.closest('.field').querySelector('.msg'); m.id=i.id+'-err'; i.setAttribute('aria-describedby',m.id);
     i.addEventListener('blur',function(){if(i.value)check(i)});
     i.addEventListener('input',function(){if(i.closest('.field').classList.contains('err'))check(i)});
   });
   form.addEventListener('submit',function(e){
     var first=null;
-    req.forEach(function(i){if(!check(i)&&!first)first=i});
+    champs.forEach(function(i){if(!check(i)&&!first)first=i});
     if(first){e.preventDefault();first.focus();return}
     var b=form.querySelector('button[type=submit]'); b.disabled=true; b.firstChild.textContent='Envoi en cours… ';
+    window.addEventListener('pageshow',function(ev){if(ev.persisted){b.disabled=false;b.firstChild.textContent='Demander ma maquette gratuite '}});
   });
 })();
 </script>
+
+<!-- Mesure d'audience : DÉSACTIVÉE.
+     GoatCounter est gratuit pour un petit site d'entreprise (service financé par les dons), ne pose aucun cookie et ne demande donc pas de bannière.
+     Pour l'activer : 1) créer un compte sur https://www.goatcounter.com et choisir un code (ex. studiorive) ;
+     2) remplacer CODE ci-dessous par ce code et sortir la ligne <script> de ce commentaire ;
+     3) mettre à jour la section « Cookies et mesure d'audience » de confidentialite.html.
+<script data-goatcounter="https://CODE.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+-->
 </body>
 </html>

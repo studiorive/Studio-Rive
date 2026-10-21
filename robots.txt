@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://studiorive.github.io/Studio-Rive/sitemap.xml

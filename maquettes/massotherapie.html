@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mains d'Or · Massothérapie à Laval</title>
 <meta name="description" content="Clinique de massothérapie à Laval, près du métro Cartier. Massage suédois, thérapeutique, prénatal et sportif. Réservation en ligne et reçus pour assurances.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Rive">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:url" content="https://studiorive.github.io/Studio-Rive/maquettes/massotherapie.html">
+<meta property="og:title" content="Mains d'Or · Massothérapie à Laval · Maquette Studio Rive">
+<meta property="og:description" content="Maquette de démonstration d'un site de clinique de massothérapie réalisée par Studio Rive (entreprise fictive).">
+<meta property="og:image" content="https://studiorive.github.io/Studio-Rive/assets/realisations/massotherapie-desktop.png">
+<meta property="og:image:width" content="1440">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://studiorive.github.io/Studio-Rive/assets/realisations/massotherapie-desktop.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23b9abf5'/%3E%3Cpath d='M12 25c2-7 6-11 8-11s6 4 8 11' fill='none' stroke='%2324213a' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='11' r='2.6' fill='%2324213a'/%3E%3C/svg%3E">
 <meta name="theme-color" content="#f6f4fd">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -581,10 +594,10 @@ html:not(.js) .js-seul{display:none!important}
         <div class="etape" data-e="4" hidden>
           <h3 tabindex="-1">Vos coordonnées</h3>
           <p class="aide">Elles servent seulement à confirmer le rendez-vous et à préparer votre reçu.</p>
-          <div class="champ"><label for="r-nom">Prénom et nom</label><input id="r-nom" name="nom" autocomplete="name" aria-describedby="e-nom"><span class="err-champ" id="e-nom"></span></div>
-          <div class="champ"><label for="r-tel">Téléphone ou cellulaire</label><input id="r-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(450) 555-0123" aria-describedby="e-tel"><span class="err-champ" id="e-tel"></span></div>
-          <div class="champ"><label for="r-courriel">Courriel</label><input id="r-courriel" name="courriel" type="email" autocomplete="email" placeholder="vous@exemple.ca" aria-describedby="e-courriel"><span class="err-champ" id="e-courriel"></span></div>
-          <div class="champ"><label for="r-note">Quelque chose à nous dire? <span class="fac">(facultatif)</span></label><textarea id="r-note" name="note" rows="2" placeholder="Une blessure, une grossesse, une préférence de pression…"></textarea></div>
+          <div class="champ"><label for="r-nom">Prénom et nom</label><input id="r-nom" name="nom" maxlength="80" autocomplete="name" aria-describedby="e-nom"><span class="err-champ" id="e-nom"></span></div>
+          <div class="champ"><label for="r-tel">Téléphone ou cellulaire</label><input id="r-tel" name="tel" type="tel" maxlength="25" inputmode="tel" autocomplete="tel" placeholder="(450) 555-0123" aria-describedby="e-tel"><span class="err-champ" id="e-tel"></span></div>
+          <div class="champ"><label for="r-courriel">Courriel</label><input id="r-courriel" name="courriel" type="email" maxlength="120" autocomplete="email" placeholder="vous@exemple.ca" aria-describedby="e-courriel"><span class="err-champ" id="e-courriel"></span></div>
+          <div class="champ"><label for="r-note">Quelque chose à nous dire? <span class="fac">(facultatif)</span></label><textarea id="r-note" name="note" maxlength="500" rows="2" placeholder="Une blessure, une grossesse, une préférence de pression…"></textarea></div>
           <label class="case"><input type="checkbox" id="r-premiere"><span>C'est ma première visite à la clinique</span></label>
           <label class="case"><input type="checkbox" id="r-recu" checked><span>Je veux mon reçu pour assurances par courriel</span></label>
         </div>
@@ -852,7 +865,7 @@ html:not(.js) .js-seul{display:none!important}
                 <label class="pil"><input type="radio" name="montant" value="200"><span>200&nbsp;$</span></label>
                 <label class="pil"><input type="radio" name="montant" value="autre"><span>Autre</span></label>
               </div>
-              <div class="champ" id="c-autre-zone" hidden><label for="c-autre">Montant de votre choix (25 à 500&nbsp;$)</label><input id="c-autre" inputmode="numeric" aria-describedby="e-autre"><span class="err-champ" id="e-autre"></span></div>
+              <div class="champ" id="c-autre-zone" hidden><label for="c-autre">Montant de votre choix (25 à 500&nbsp;$)</label><input id="c-autre" inputmode="numeric" maxlength="4" aria-describedby="e-autre"><span class="err-champ" id="e-autre"></span></div>
               <p class="aide" id="c-equiv">Équivaut à un massage suédois de 60 minutes.</p>
             </fieldset>
             <fieldset><legend>Couleur de la carte</legend>
@@ -867,7 +880,7 @@ html:not(.js) .js-seul{display:none!important}
               <div class="champ"><label for="c-de">De la part de</label><input id="c-de" maxlength="40" aria-describedby="e-de"><span class="err-champ" id="e-de"></span></div>
             </div>
             <div class="champ"><label for="c-mot">Petit mot <span class="fac">(facultatif)</span> <span class="compte" id="c-compte">0 / 140</span></label><textarea id="c-mot" rows="2" maxlength="140"></textarea></div>
-            <div class="champ"><label for="c-courriel">Courriel de la personne qui la reçoit</label><input id="c-courriel" type="email" autocomplete="off" placeholder="nom@exemple.ca" aria-describedby="e-ccourriel"><span class="err-champ" id="e-ccourriel"></span></div>
+            <div class="champ"><label for="c-courriel">Courriel de la personne qui la reçoit</label><input id="c-courriel" type="email" maxlength="120" autocomplete="off" placeholder="nom@exemple.ca" aria-describedby="e-ccourriel"><span class="err-champ" id="e-ccourriel"></span></div>
             <div class="btns-ligne">
               <button type="submit" class="btn btn-noir">Offrir cette carte<svg aria-hidden="true"><use href="#i-cadeau"/></svg></button>
               <button type="button" class="btn btn-doux" id="c-imprimer">Je préfère l'imprimer</button>
